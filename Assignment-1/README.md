@@ -23,7 +23,8 @@ Download or clone this repository. This code, and the idea for the assignment, c
 
 * Open up the Windows Command Line or Mac Terminal or Linux Terminal.
 
-* Change your directory to the folder with the pacman code. You should see a file called `commands.txt` and four folders: `py`, `layouts`, `test_cases` and `images`. You will also see a PPT file `HW1_introduction.pptx`, which I will go through in the lecture.
+* Change your directory to the folder with the pacman code. You should see a file called `commands.txt` and four folders: `py`, `layouts`, `test_cases` and `images`. 
+<!-- You will also see a PPT file `HW1_introduction.pptx`, which I will go through in the lecture. -->
 
 * Run some of these commands (as listed in `commands.txt`) to make sure your setup works. Below are some examples:
 
@@ -43,8 +44,7 @@ python3 py/pacman.py --layout tinyMaze --pacman GoWestAgent
 
 
 ### Possible errors and notes
-If you're unable to run `pacman.py` or get its graphics to work, or if you're getting an error about "tkinter" or "_tkinter", that's okay. As long as you can run autograder.py, you should be able to complete the assignment fully. 
-
+If you're unable to run `pacman.py` or get its graphics to work, or if you're getting an error about "tkinter" or "_tkinter", that's okay. As long as you can run autograder.py, you should be able to complete the assignment fully.
 We note that the provided commands are designed to work with Mac/Linux with Python version 3. If you use Windows (like me!), we recommend that you run the code in the Windows command line (CMD), and make the following changes: 
 * Please use `\` instead of `/` while specifying the path to the file.
 * If it still does not work, you may use `py -3` instead of `python3` in the command you're executing on CMD. An example command that works for us is `py -3 py\autograder.py`.
