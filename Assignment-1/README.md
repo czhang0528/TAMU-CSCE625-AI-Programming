@@ -12,7 +12,7 @@ Submit one .zip file named Assignment_1_firstname_lastname.zip (e.g., Assignment
 1) a .py file with the search algorithms you implemented: `search.py`;
 2) a `collaboration.txt` that lists with whom you have discussed the homework (see more details below). 
 
-* Collaboration: You may discuss your homework with your classmates. However, you need to write your solutions and submit them separately. In your submission, you need to list with whom you have discussed the homework in a .txt file `collaboration.txt`. Please list each classmate’s name. number (e.g., chao.209) as a row in the .txt file. That is, if you discussed the homework with two classmates, your .txt file will have two rows. If you did not discuss your homework with your classmates, just write "no discussion" in `collaboration.txt`. Please consult the syllabus for what is and is not an acceptable collaboration.
+* Collaboration: You may discuss your homework with your classmates. However, you need to write your solutions and submit them separately. In your submission, you need to list with whom you have discussed the homework in a .txt file `collaboration.txt`. Please list each classmate’s name and NetID as a row in the .txt file (e.g., Cheng Zhang, chzhang). That is, if you discussed the homework with two classmates, your .txt file will have two rows. If you did not discuss your homework with your classmates, just write "no discussion" in `collaboration.txt`. Please consult the syllabus for what is and is not an acceptable collaboration.
 
 
 ## Introduction
