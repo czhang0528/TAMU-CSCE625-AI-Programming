@@ -6,7 +6,7 @@
 
 * Expected time commitment: 10 hrs
 
-* Carmen submission: 
+* Canvas submission: 
 Submit one .zip file named Assignment_1_firstname_lastname.zip (e.g., Assignment_1_Cheng_Zhang.zip), which contains
   - your completed Python script `DR.py` (for dimensionality reduction - Question 1)
   - your completed Python script `LR.py` (for linear regression - Question 2)
