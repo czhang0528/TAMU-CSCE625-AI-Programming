@@ -1,0 +1,180 @@
+\documentclass{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[letterpaper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{caption}
+\usepackage{float}
+\input{math}
+
+\title{TAMU CSCE 625 (Spring 2025) \\ Assignment \#4}
+% \author{You}
+\date{}
+
+\begin{document}
+\maketitle
+
+
+% \begin{abstract}
+% Your abstract.
+% \end{abstract}
+
+\section{Starting Point}
+
+
+\textbf{Scripts:} From the GitHub repository, you will find:
+
+\begin{itemize}
+    \item Latex template, which you will be amending by adding your results and answers.
+
+    \item Scripts for the image captioning task using Transformers.
+
+    \item Scripts for the image classification task using Transformers.
+
+\end{itemize}
+
+\noindent \textbf{Data:} Please see the corresponding questions and links for data download.
+
+\vspace{3mm}
+
+\noindent \textbf{Submission:} Please strictly follow the instruction for the submission.
+\begin{itemize}
+    \item Please use the provided template only. Submission must be written in LaTeX. All submissions not adhering to the template will not be graded and receive a zero.
+    \item Please submit all the \texttt{.py} files. Add all relevant plots and text answers in the boxes provided in this file. To include plots you can simply modify the already provided latex code. Submit the complied \texttt{.pdf} report as well.\\
+
+    Note: Partial points will be given for implementing parts of the homework even if you don’t get the mentioned accuracy as long as you include partial results in this pdf.
+
+    \item a \texttt{collaboration.txt} that lists with whom you have discussed the homework. \\
+
+    Collaboration: You may discuss your homework with your classmates. However, you need to write your solutions and submit them separately. In your submission, you need to list with whom you have discussed the homework in a \texttt{.txt} file \texttt{collaboration.txt}. Please list each classmate’s name and NetID as a row in the .txt file (e.g., Cheng Zhang, chzhang). That is, if you discussed the homework with two classmates, your \texttt{.txt} file will have two rows. If you did not discuss your homework with your classmates, just write ``no discussion'' in \texttt{collaboration.txt}. Please consult the syllabus for what is and is not an acceptable collaboration.
+
+    \item Please zip all files (\texttt{.py}, \texttt{.pdf}, \texttt{.txt}) into one package and upload via Canvas. 
+
+    
+\end{itemize}
+
+\section{Image Captioning with Transformers (70 points)}
+
+We will be implementing the different pieces of a Transformer decoder (\href{https://arxiv.org/pdf/1706.03762.pdf}{Transformers}), and train it for image captioning on a subset of the \href{https://cocodataset.org/#home}{COCO dataset}. 
+\begin{itemize}
+    \item \textbf{Setup:} Run the following command to extract COCO data, in the \texttt{transformer\_captioning/datasets} folder : \texttt{./get\_coco\_captioning.sh}
+    %: \\ 
+    % \texttt{get_coco_captioningsh}
+\item \textbf{Question:} Follow the instructions in the \texttt{README.md} file in the \texttt{transformer\_captioning} folder to complete the implementation of the transformer decoder.
+\item \textbf{Deliverables:} After implementing all parts, use run.py for training the full model. The code will log plots to \texttt{plots}. Extract plots and paste them into the appropriate section below. 
+
+\item \textbf{Expected results:}
+    These are expected training losses after 100 epochs. Do not change the seed in run.py.
+    \begin{itemize}
+        \item 2-heads, 2-layers, lr 1e-4: Final loss $\leq$ 1 
+        \item 4-heads, 6-layers, lr 1e-4: Final loss $\leq$ 0.3 
+        \item 4-heads, 6-layers, lr 1e-3: Final loss $\leq$ 0.05
+    \end{itemize}
+\end{itemize}
+
+\begin{enumerate}
+
+    \item Paste training loss plots for each of the three hyper-param configs
+
+    2-heads-2-layers-lr-1e-4: \textbf{TODO: fill in final train loss here.} \\
+    4-heads-6-layers-lr-1e-4: \textbf{TODO: fill in final train loss here.} \\
+    4-heads-6-layers-lr-1e-3: \textbf{TODO: fill in final train loss here.} 
+
+    \begin{figure}[H]
+    \centering
+    % TODO: put your plot here.
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{2-heads-2-layers-lre-4}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{4-heads-6-layers-lre-4}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{4-heads-6-layers-lre-3}
+    \end{subfigure}
+    
+    \end{figure}
+
+    \item Paste any three generated captioning samples from the training set with the three different settings. The provided code creates these plots at the end of training.
+
+    \begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{Sample1: 2-heads-2-layers-lre-4}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{Sample2:4-heads-6-layers-lre-4}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{Sample3:4-heads-6-layers-lre-3}
+    \end{subfigure}
+\end{figure}
+
+
+    \item Based on the observations of the three different settings, What would you change in the training procedure to get better validation performance? Why tweaking these hyper-parameters will lead to better performances?
+
+    \textbf{Solution:}
+    TODO: fill in your answers here.
+
+\end{enumerate}
+    
+
+
+\clearpage
+
+\section{Classification with Vision Transformers (30 points)}
+
+We will use the transformer you implemented in the previous part to implement a Vision Transformer (\href{https://arxiv.org/abs/2010.11929}{ViT}), for classification on CIFAR10. 
+
+\begin{itemize}
+    \item \textbf{Question:} Follow the instructions in the \texttt{README.md} file in the \texttt{vit\_classification} folder. You are encouraged to resuse code from the previous question. 
+    \item \textbf{Deliverables:} Run training using \texttt{run.py} for training the full model. The code will log plots \texttt{acc\_out.png} (train and test accuracy) and \texttt{loss\_out.png} (train loss). 
+    \item \textbf{Expected Results:} After 100 epochs, test accuracy should be $\geq 65\%$, train accuracy should be $\approx 100\%$, and training loss $\leq 0.3$. 
+\end{itemize}
+
+
+
+
+\begin{enumerate}
+    \item Test Accuracy: \textbf{TODO: Fill in the accuracy here.}
+
+    \item Train Accuracy: \textbf{TODO: Fill in the accuracy here.}
+
+    \item Training Loss: \textbf{TODO: Fill in the loss here.}
+
+    \begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{Train/test accuracy}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=\linewidth]{example-image}
+        \caption{Training loss}
+    \end{subfigure}
+\end{figure}
+
+\end{enumerate}
+
+
+% \bibliographystyle{alpha}
+% \bibliography{sample}
+
+\end{document}
